@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fun with Randomness</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Fun with Randomness</h1>
+    <p class="intro">
+      Welcome to <strong>Fun with Randomness</strong> — your daily dose of surprise, motivation, and utility!
+      Discover random quotes, energizing background moods, and secure password generation — all in one playful toolbox.
+    </p>
+
+    <div class="box">
+      <h2>📜 Random Inspirational Quote</h2>
+      <p id="quote">Click the button to get inspired!</p>
+      <button onclick="generateQuote()">New Quote</button>
+      <button onclick="copyText('quote')">Copy Quote</button>
+    </div>
+
+    <div class="box">
+      <h2>🎨 Change Background Color</h2>
+      <button onclick="changeBackground()">Change Color</button>
+    </div>
+
+    <div class="box">
+      <h2>🔐 Generate Strong Password</h2>
+      <p id="password">Click the button to generate</p>
+      <button onclick="generatePassword()">Generate Password</button>
+      <button onclick="copyText('password')">Copy Password</button>
+    </div>
+
+    <div class="box">
+      <h2>💡 Fun Fact Generator</h2>
+      <p id="fact">Click the button to learn something random!</p>
+      <button onclick="generateFact()">New Fact</button>
+    </div>
+
+    <div class="box">
+      <h2>🛠️ How It Works</h2>
+      <ul class="features">
+        <li>🎯 Click a button to receive a surprise quote that changes each time.</li>
+        <li>🎨 Instantly shift your mood by changing the website’s background color.</li>
+        <li>🔒 Generate ultra-secure passwords with a single click.</li>
+        <li>📋 Use copy buttons to instantly save text to your clipboard.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>✨ Built with randomness, fun, and creativity by Mrudani Lellapalli ✨</p>
+    </footer>
+
+    <!-- Feedback Section -->
+    <div class="box feedback-box">
+      <h2>📝 Share Your Feedback</h2>
+      <p>Tell us how this site helped you feel better or what you'd like to see next!</p>
+      <form id="feedbackForm">
+        <textarea id="feedbackText" placeholder="Your thoughts..." required></textarea>
+        <label for="moodRating">Mood Improvement:</label>
+        <select id="moodRating" required>
+          <option value="">Select</option>
+          <option value="5">😁 Very much</option>
+          <option value="4">😊 A lot</option>
+          <option value="3">🙂 A bit</option>
+          <option value="2">😐 Slightly</option>
+          <option value="1">😔 Not much</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit Feedback</button>
+        <p id="thankYouMessage" class="hidden">🎉 Thank you for your feedback!</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
